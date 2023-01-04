@@ -1,8 +1,7 @@
 const btn = document.querySelector(".btn");
 const coupon = document.querySelector(".coupon");
 
-
-const copyText = (e) => {
+btn.addEventListener("click", (e) => {
   e.preventDefault();
   coupon.select();
   coupon.setSelectionRange(0, 999);
@@ -13,7 +12,4 @@ const copyText = (e) => {
       btn.textContent = "Copy"
     }, 3000);
   })
-};
-
-btn.addEventListener("click", copyText);
-
+});
